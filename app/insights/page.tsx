@@ -1,0 +1,3 @@
+import {SectionLabel} from '@/components/shell';
+export const metadata={title:'Insights',description:'Insights and updates from TechMegaTrends.'};
+export default function Insights(){return <main id="main"><section className="page-hero"><div className="container"><SectionLabel>IDEAS & INSIGHTS</SectionLabel><h1>Curiosity drives<br/><span className="gradient-text">progress.</span></h1><p>Ideas about design, software, cloud, cybersecurity and the future of digital business.</p></div></section><div className="page-content"><div className="container"><div className="empty-note">Our insights library is being prepared. Verified, original articles will appear here when published.</div></div></div></main>}
