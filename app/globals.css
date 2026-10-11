@@ -428,3 +428,14 @@ html.reduce-motion .sculpture-image,html.reduce-motion .stage-sculpture{animatio
 @media(max-width:420px){
   .visual-home-hero h1{font-size:clamp(36px,9.5vw,46px)!important;letter-spacing:-.055em}
 }
+
+
+/* Cybersecurity service spotlight — responsive, consistent with V16 */
+.cybersecurity-feature{display:flex;align-items:center;justify-content:space-between;gap:36px;margin:54px 0 20px;padding:clamp(26px,4vw,56px);border:1px solid rgba(94,181,255,.34);border-radius:24px;background:radial-gradient(ellipse at 100% 0%,rgba(42,129,233,.2),transparent 55%),linear-gradient(135deg,#091a2e,#030913);box-shadow:0 20px 65px rgba(0,0,0,.18)}
+.cybersecurity-feature>div{max-width:760px}
+.cybersecurity-feature h2,.cybersecurity-feature h3{font-size:clamp(28px,3.5vw,48px);line-height:1.1;letter-spacing:-.045em;margin:18px 0}
+.cybersecurity-feature h3 span{color:#5eb5ff}
+.cybersecurity-feature p{color:#bbd0e7;line-height:1.7;font-size:clamp(15px,1.3vw,18px)}
+.cybersecurity-feature .mono-button{flex-shrink:0;text-align:center}
+@media(max-width:900px){.cybersecurity-feature{flex-direction:column;align-items:flex-start;gap:22px}.cybersecurity-feature .mono-button{max-width:100%;white-space:normal}}
+@media(max-width:560px){.cybersecurity-feature{margin:34px 0 12px;padding:24px 20px;border-radius:18px}.cybersecurity-feature .mono-button{width:100%;justify-content:center}}
