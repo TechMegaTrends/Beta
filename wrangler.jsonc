@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "beta",
+  "name": "techmegatrends-prod",
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-10-10",
   "compatibility_flags": [
@@ -17,7 +17,7 @@
   "services": [
     {
       "binding": "WORKER_SELF_REFERENCE",
-      "service": "beta"
+      "service": "techmegatrends-prod"
     }
   ]
 }
