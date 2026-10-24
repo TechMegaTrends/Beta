@@ -498,3 +498,32 @@ html.reduce-motion .sculpture-image,html.reduce-motion .stage-sculpture{animatio
 @media(max-width:960px){.v17-divisions{grid-template-columns:1fr 1fr}.v17-cta-layout{grid-template-columns:1fr}.v17-trust-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.v17-divisions,.v17-trust-grid{grid-template-columns:1fr}.v17-division{min-height:0;padding:24px}.v17-proof-strip .container{align-items:flex-start;flex-direction:column;padding-block:16px}.v17-cta-actions{width:100%}.v17-final-cta .mono-button{white-space:normal}}
 @media(prefers-reduced-motion:reduce){.v17-division{transition:none!important}.v17-division:hover{transform:none}}
+
+
+/* V18 Dreamcore cinematic hero — additive, preserves V17 design and routes */
+.v18-hero{isolation:isolate;background:radial-gradient(ellipse at 78% 45%,#35205f 0%,transparent 48%),#070b1b}
+.v18-hero .v18-cinema{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:auto;--v18-x:0;--v18-y:0;contain:paint}
+.v18-cinema>*{pointer-events:none}
+.v18-hero .mono-hero-inner{position:relative;z-index:3;pointer-events:none}
+.v18-hero .mono-hero-inner a{pointer-events:auto}
+.v18-hero .mono-hero-inner h1{text-shadow:0 7px 35px rgba(3,6,24,.48)}
+.v18-hero .mono-hero-description{max-width:650px;text-shadow:0 2px 15px rgba(3,6,24,.8)}
+.v18-hero .page-visual-bg,.v18-hero .mono-hero-noise{opacity:.16;pointer-events:none}
+.v18-hero .hero-product-orbit{opacity:.16;pointer-events:none}
+.v18-hero .mono-ring{opacity:.12;pointer-events:none}
+.v18-video{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;opacity:.49;filter:saturate(1.3) contrast(1.07)}
+.v18-nebula{position:absolute;inset:-15%;background:radial-gradient(ellipse at 75% 55%,rgba(70,224,246,.25),transparent 32%),radial-gradient(ellipse at 70% 45%,rgba(131,71,247,.45),transparent 48%),radial-gradient(ellipse at 93% 69%,rgba(255,137,120,.18),transparent 29%);filter:blur(24px)}
+.v18-glass-object{position:absolute;width:min(38vw,590px);aspect-ratio:1;top:50%;left:77%;transform:translate(calc(-50% + var(--v18-x)*22px),calc(-50% + var(--v18-y)*16px)) rotateX(calc(var(--v18-y)*-6deg)) rotateY(calc(var(--v18-x)*9deg));transform-style:preserve-3d;filter:drop-shadow(0 28px 80px rgba(79,62,194,.36));transition:transform .35s ease-out}
+.v18-glass{position:absolute;inset:9%;border:clamp(18px,2.5vw,38px) solid transparent;border-radius:45% 55% 53% 47%;background:linear-gradient(128deg,rgba(178,249,255,.8),rgba(174,95,255,.3) 28%,rgba(22,203,246,.7) 51%,rgba(255,144,173,.65) 77%,rgba(181,245,255,.8)) border-box;mask:linear-gradient(#000 0 0) padding-box,linear-gradient(#000 0 0);mask-composite:exclude;box-shadow:0 0 80px rgba(124,84,252,.2),inset 0 0 70px rgba(131,237,255,.3);transform:rotate(-23deg) rotateX(58deg);animation:v18-orbit 19s ease-in-out infinite alternate}
+.v18-glass-inner{inset:22%;border-width:clamp(12px,1.4vw,24px);border-radius:50%;transform:rotate(58deg) rotateY(54deg);animation-duration:15s;animation-direction:alternate-reverse}
+.v18-glass-core{position:absolute;inset:33%;border-radius:50%;background:radial-gradient(circle at 30% 27%,#f6e9ff,#c390ff 20%,#6475eb 51%,#251952 77%);box-shadow:0 0 70px rgba(156,106,255,.75),inset -18px -25px 34px #180e3c;animation:v18-bob 8s ease-in-out infinite alternate}
+.v18-glass-shine{position:absolute;inset:9%;border-radius:50%;background:radial-gradient(circle at 30% 20%,rgba(245,249,255,.31),transparent 14%);filter:blur(9px)}
+.v18-floor{position:absolute;right:1%;bottom:-28%;width:70%;height:48%;background:radial-gradient(ellipse,rgba(95,116,248,.28),transparent 70%);filter:blur(38px)}
+.v18-vignette{position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,10,25,.92) 0%,rgba(7,10,25,.62) 42%,rgba(7,10,25,.02) 83%),linear-gradient(0deg,rgba(7,10,25,.78),transparent 29%)}
+@keyframes v18-orbit{to{transform:rotate(38deg) rotateX(67deg) rotateY(35deg)}}
+@keyframes v18-bob{to{transform:translateY(-18px) scale(1.04)}}
+@media(max-width:900px){.v18-glass-object{left:73%;top:45%;width:68vw;opacity:.54}.v18-vignette{background:linear-gradient(90deg,rgba(7,10,25,.9),rgba(7,10,25,.58)),linear-gradient(0deg,rgba(7,10,25,.7),transparent 35%)}}
+@media(max-width:600px){.v18-glass-object{left:78%;top:30%;width:92vw;opacity:.34}.v18-video{opacity:.22}.v18-hero .mono-hero-inner h1{letter-spacing:-2px}.v18-hero .hero-product-orbit{display:none}}
+@media(prefers-reduced-motion:reduce){.v18-video{display:none}.v18-glass,.v18-glass-core{animation:none!important}.v18-glass-object{transition:none!important}}
+html.reduce-motion .v18-video{display:none}
+html.reduce-motion .v18-glass,html.reduce-motion .v18-glass-core{animation:none!important}
