@@ -548,3 +548,28 @@ html.reduce-motion .v20-hero-film{display:none}
 .v20-transformation-end strong{font-size:clamp(19px,2.1vw,27px);letter-spacing:-.03em}
 .v20-transformation-end a{display:inline-flex;gap:10px;align-items:center;padding:15px 23px;border-radius:50px;background:#2865df;color:white;font-weight:700}
 @media(max-width:850px){.v20-transformation-heading{grid-template-columns:1fr}.v20-transformation-path{grid-template-columns:1fr}.v20-transform-card{min-height:220px}.v20-transform-card h3{margin-top:30px}.v20-transform-next{display:none}.v20-transformation-end{flex-wrap:wrap}}
+
+/* V20 INNER PAGE MOTION — limited to pages opting into v20-inner-hero */
+.page-hero.v20-inner-hero{position:relative;isolation:isolate;overflow:hidden}
+.page-hero.v20-inner-hero>.container{position:relative;z-index:2}
+.v20-page-motion{position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:none}
+.v20-motion-aura{position:absolute;inset:0;background:radial-gradient(ellipse at 79% 40%,rgba(108,199,252,.2),transparent 45%)}
+.v20-motion-object{position:absolute;right:5%;top:5%;width:min(38vw,510px);aspect-ratio:1;filter:drop-shadow(0 20px 42px rgba(91,137,242,.35));opacity:.74}
+.v20-motion-ring{position:absolute;inset:13%;border:clamp(10px,2.3vw,30px) solid rgba(138,212,255,.7);border-radius:41% 59% 64% 36% / 54% 45% 55% 46%;box-shadow:inset 0 0 24px rgba(224,242,255,.55),0 0 19px rgba(127,172,255,.4);transform:rotate(-26deg) rotateX(40deg)}
+.v20-motion-ring-one{animation:v20-page-rotate 19s ease-in-out infinite alternate}
+.v20-motion-ring-two{inset:26%;border-color:rgba(196,150,255,.63);transform:rotate(58deg) rotateY(37deg);animation:v20-page-rotate 23s ease-in-out infinite alternate-reverse}
+.v20-motion-core{position:absolute;inset:41%;background:radial-gradient(circle at 30% 30%,#f9fbff,#72bfff 35%,#7358c7 85%);border-radius:50%;filter:blur(2px)}
+.v20-motion-spark{position:absolute;width:7px;height:7px;border-radius:50%;background:#b8f4ff;box-shadow:0 0 22px #a3d8ff}
+.v20-spark-a{top:14%;left:27%}.v20-spark-b{top:70%;right:13%}.v20-spark-c{top:80%;left:21%}
+.v20-motion-ai .v20-motion-ring{border-style:dotted;border-color:#6de9fc}
+.v20-motion-saas .v20-motion-ring{border-radius:25%;transform:rotate(25deg) rotateX(50deg)}
+.v20-motion-cloud .v20-motion-ring{border-radius:55% 45% 60% 40%}
+.v20-motion-security .v20-motion-ring{border-radius:50% 50% 44% 44% / 32% 32% 68% 68%}
+.v20-motion-mobile .v20-motion-ring{border-radius:29%}
+.v20-motion-websites .v20-motion-ring{border-radius:18%}
+.v20-motion-portfolio .v20-motion-ring{border-radius:32%;opacity:.65}
+.v20-motion-contact .v20-motion-object{opacity:.35}
+@keyframes v20-page-rotate{to{transform:rotate(33deg) rotateY(45deg) translateY(-12px)}}
+@media(max-width:800px){.v20-motion-object{right:-22%;top:15%;width:75vw;opacity:.3}}
+@media(prefers-reduced-motion:reduce){.v20-motion-ring{animation:none!important}}
+html.reduce-motion .v20-motion-ring{animation:none!important}
