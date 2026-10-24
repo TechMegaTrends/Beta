@@ -573,3 +573,31 @@ html.reduce-motion .v20-hero-film{display:none}
 @media(max-width:800px){.v20-motion-object{right:-22%;top:15%;width:75vw;opacity:.3}}
 @media(prefers-reduced-motion:reduce){.v20-motion-ring{animation:none!important}}
 html.reduce-motion .v20-motion-ring{animation:none!important}
+
+
+/* V20 cinematic editorial scroll-story, respecting the approved London digital-city baseline */
+.v20-scroll-story{background:#f5f9ff;color:#102d56;overflow:clip}
+.v20-scroll-intro{padding:clamp(80px,9vw,135px) 0 72px}
+.v20-scroll-intro h2{font-size:clamp(38px,5vw,78px);line-height:1.07;letter-spacing:-.06em;margin:0 0 20px}
+.v20-scroll-intro h2 span{color:#316fc9}
+.v20-scroll-intro>p:last-child{color:#536d93;font-size:clamp(16px,1.3vw,20px)}
+.v20-scroll-scenes{position:relative}
+.v20-scroll-chapter{min-height:125vh;position:relative;display:grid;align-items:center;isolation:isolate}
+.v20-scroll-visual{position:absolute;inset:0;overflow:hidden;z-index:-1}
+.v20-scroll-city{position:absolute;inset:-4%;background:linear-gradient(90deg,rgba(7,26,55,.82),rgba(10,36,70,.44) 60%,rgba(10,36,70,.16)),url('/media/v20-hero-poster.jpg') center/cover no-repeat;filter:saturate(1.08)}
+.v20-scroll-lines{position:absolute;inset:0;opacity:.56;background:repeating-linear-gradient(111deg,transparent 0,transparent 130px,rgba(82,195,255,.23) 131px,transparent 134px);mask-image:linear-gradient(to right,transparent,#000 22%,#000 90%)}
+.v20-scroll-overlay{position:sticky;top:clamp(72px,13vh,150px);padding:42px max(28px,calc((100vw - 1180px)/2));width:100%;color:#fff}
+.v20-scroll-overlay>div{max-width:660px}
+.v20-scroll-number{font-size:12px;letter-spacing:.2em;font-weight:700;color:#c5e9ff}
+.v20-scroll-overlay h3{font-size:clamp(40px,5.5vw,84px);line-height:1.02;letter-spacing:-.07em;margin:24px 0 26px;text-wrap:balance}
+.v20-scroll-overlay p{font-size:clamp(16px,1.35vw,21px);line-height:1.8;max-width:540px;color:#dceafc}
+.v20-scroll-tag{display:inline-flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.18em;padding:13px 17px;border:1px solid rgba(184,223,255,.5);background:rgba(255,255,255,.12);border-radius:999px;margin-top:20px}
+.v20-scroll-footer{padding:70px 0 90px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.v20-scroll-footer strong{font-size:clamp(20px,2.4vw,34px);letter-spacing:-.04em}
+.v20-scroll-footer a{display:inline-flex;align-items:center;gap:10px;color:#fff;background:#225dcb;padding:15px 22px;border-radius:99px;font-weight:700}
+.v20-scroll-chapter:nth-child(2) .v20-scroll-city{background-position:60% center;filter:hue-rotate(7deg) saturate(1.12)}
+.v20-scroll-chapter:nth-child(3) .v20-scroll-city{background-position:75% center;filter:saturate(.93)}
+@media(max-width:700px){.v20-scroll-chapter{min-height:95vh}.v20-scroll-overlay{top:15vh;padding:25px}.v20-scroll-city{background-position:68% center}.v20-scroll-footer{flex-direction:column;align-items:flex-start}}
+@media(prefers-reduced-motion:reduce){.v20-scroll-chapter{min-height:70vh}.v20-scroll-visual{transform:none!important}.v20-scroll-lines{display:none}}
+html.reduce-motion .v20-scroll-chapter{min-height:70vh}
+html.reduce-motion .v20-scroll-lines{display:none}
