@@ -601,3 +601,17 @@ html.reduce-motion .v20-motion-ring{animation:none!important}
 @media(prefers-reduced-motion:reduce){.v20-scroll-chapter{min-height:70vh}.v20-scroll-visual{transform:none!important}.v20-scroll-lines{display:none}}
 html.reduce-motion .v20-scroll-chapter{min-height:70vh}
 html.reduce-motion .v20-scroll-lines{display:none}
+
+
+/* V20 architectural inner-page treatment: replaces original abstract orbit shapes. */
+.page-hero.v20-inner-hero .v20-engineering-motion{z-index:0;opacity:.7}
+.page-hero.v20-inner-hero .v20-engineering-city{position:absolute;inset:-12% -2%;background:linear-gradient(90deg,rgba(4,20,43,.84) 0%,rgba(6,25,53,.72) 38%,rgba(6,32,65,.24) 90%),url('/media/v20-hero-poster.jpg') 67% center/cover no-repeat;will-change:transform}
+.page-hero.v20-inner-hero .v20-engineering-grid{position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,rgba(87,192,255,.18) 36%,transparent 37%);opacity:.6}
+.page-hero.v20-inner-hero .v20-engineering-sheen{position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.05),transparent 58%)}
+.page-hero.v20-inner-hero .v20-motion-ai .v20-engineering-city{background-position:72% 41%}
+.page-hero.v20-inner-hero .v20-motion-saas .v20-engineering-city{background-position:84% 60%}
+.page-hero.v20-inner-hero .v20-motion-cloud .v20-engineering-city{background-position:62% 48%}
+.page-hero.v20-inner-hero .v20-motion-security .v20-engineering-city{background-position:96% 50%}
+.page-hero.v20-inner-hero .v20-motion-portfolio .v20-engineering-city{background-position:57% 48%}
+@media(max-width:700px){.page-hero.v20-inner-hero .v20-engineering-city{background-position:68% center}}
+@media(prefers-reduced-motion:reduce){.page-hero.v20-inner-hero .v20-engineering-city{will-change:auto}}
