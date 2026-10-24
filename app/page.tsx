@@ -1,6 +1,5 @@
 import V20HeroMedia from '@/components/v20-hero-media';
 import V20Transformation from '@/components/v20-transformation';
-import ImmersiveStage from '@/components/immersive-stage';
 import Link from 'next/link';
 import {ArrowUpRight,ArrowRight,MoveUpRight} from 'lucide-react';
 import {services,features,industries} from '@/lib/data';
