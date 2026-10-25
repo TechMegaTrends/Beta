@@ -651,3 +651,20 @@ html.reduce-motion .v20-home .service-card,html.reduce-motion .v20-home .v17-div
 @media(max-width:850px){.v20-editorial-panel-inner{grid-template-columns:1fr}.v20-editorial-display{min-height:360px}}
 @media(prefers-reduced-motion:reduce){.v20-editorial-display{transform:none!important}}
 html.reduce-motion .v20-editorial-display{transform:none!important}
+
+
+/* V20 portfolio gallery and conversion finale: homepage only */
+.v20-home .portfolio-section{background:linear-gradient(180deg,#f6f9fe 0%,#edf4fd 100%);color:#15315a}
+.v20-home .portfolio-section .section-head p{color:#546e92}
+.v20-home .portfolio-section .project-card,.v20-home .portfolio-section .portfolio-card{border:1px solid rgba(154,186,224,.45);border-radius:22px;overflow:hidden;box-shadow:0 20px 48px rgba(24,70,134,.09);background:#fff}
+.v20-home .portfolio-section .card-media img{transition:transform .75s cubic-bezier(.22,1,.36,1)}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){.v20-home .portfolio-section a:hover .card-media img{transform:scale(1.05)}}
+.v20-home .v17-final-cta{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(125deg,#06244f,#104a93 58%,#1766aa);color:#fff}
+.v20-home .v17-final-cta:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(5,27,59,.88),rgba(5,34,71,.54)),url('/media/v20-hero-poster.jpg') center 57% / cover no-repeat;opacity:.9}
+.v20-home .v17-final-cta .display-title,.v20-home .v17-final-cta .display-title .mono-highlight{color:#fff}
+.v20-home .v17-final-cta p{color:#dceafa}
+.v20-home .v17-final-cta .mono-button{background:#fff;color:#164179;border:1px solid #fff}
+.v20-home .v17-final-cta .mono-button-outline{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.65)}
+.v20-home .v17-final-cta a:focus-visible{outline:3px solid #9de6ff;outline-offset:4px}
+@media(max-width:700px){.v20-home .v17-final-cta:before{background-position:72% center}.v20-home .v17-final-cta .v17-cta-layout{gap:30px}}
+@media(prefers-reduced-motion:reduce){.v20-home .portfolio-section .card-media img{transition:none!important}}
