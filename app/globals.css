@@ -631,3 +631,23 @@ html.reduce-motion .v20-scroll-lines{display:none}
 .v20-home .service-card:hover .service-bottom{color:#1c65db}
 @media(prefers-reduced-motion:reduce){.v20-home .service-card,.v20-home .v17-division,.v20-home .why-card,.v20-home .service-card .card-media img{transition:none!important}}
 html.reduce-motion .v20-home .service-card,html.reduce-motion .v20-home .v17-division,html.reduce-motion .v20-home .why-card{transition:none!important}
+
+
+/* V20 clean editorial corporate scroll panels / London engineered architectural system */
+.v20-editorial-showcase{background:#f6f9fd;overflow:clip}
+.v20-editorial-panel{padding:clamp(68px,9vw,135px) 0;border-top:1px solid #dbe7f5}
+.v20-editorial-panel-inner{display:grid;grid-template-columns:1fr 1.08fr;gap:clamp(30px,6vw,100px);align-items:center}
+.v20-editorial-index{font-size:12px;letter-spacing:.18em;color:#5a749a;font-weight:700}
+.v20-editorial-copy h2{font-size:clamp(35px,4.5vw,66px);letter-spacing:-.065em;line-height:1.08;margin:16px 0 25px;color:#142e59}
+.v20-editorial-copy>div>p:not(.v20-overline){font-size:clamp(16px,1.25vw,19px);line-height:1.8;max-width:510px;color:#526a8b}
+.v20-editorial-action{margin-top:25px;display:inline-flex;align-items:center;gap:16px;font-weight:750;border-bottom:1px solid #357adb;padding-bottom:10px;color:#205ab6}
+.v20-editorial-display{position:relative;min-height:clamp(330px,35vw,535px);overflow:hidden;border-radius:30px;border:1px solid rgba(165,202,238,.6);box-shadow:0 34px 70px rgba(28,70,130,.16);background:#c8e4fa}
+.v20-editorial-display-photo{position:absolute;inset:-2%;background:linear-gradient(150deg,rgba(10,43,89,.12),rgba(33,114,199,.09)),url('/media/v20-hero-poster.jpg') 70% center/cover no-repeat;transform:scale(1.035)}
+.v20-editorial-ai .v20-editorial-display-photo{background-position:80% 35%;filter:hue-rotate(5deg)}
+.v20-editorial-security .v20-editorial-display-photo{background-position:94% 60%;filter:saturate(.85)}
+.v20-editorial-display-grid{position:absolute;inset:0;background:linear-gradient(0deg,rgba(4,30,65,.48),transparent 42%)}
+.v20-editorial-metric{position:absolute;bottom:24px;left:24px;right:24px;display:flex;justify-content:space-between;align-items:center;color:white;letter-spacing:.14em;font-size:11px;font-weight:700}
+@media(min-width:851px){.v20-editorial-panel:nth-child(even) .v20-editorial-copy{order:2}.v20-editorial-panel:nth-child(even) .v20-editorial-display{order:1}}
+@media(max-width:850px){.v20-editorial-panel-inner{grid-template-columns:1fr}.v20-editorial-display{min-height:360px}}
+@media(prefers-reduced-motion:reduce){.v20-editorial-display{transform:none!important}}
+html.reduce-motion .v20-editorial-display{transform:none!important}
