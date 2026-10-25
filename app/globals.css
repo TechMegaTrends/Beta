@@ -615,3 +615,19 @@ html.reduce-motion .v20-scroll-lines{display:none}
 .page-hero.v20-inner-hero .v20-motion-portfolio .v20-engineering-city{background-position:57% 48%}
 @media(max-width:700px){.page-hero.v20-inner-hero .v20-engineering-city{background-position:68% center}}
 @media(prefers-reduced-motion:reduce){.page-hero.v20-inner-hero .v20-engineering-city{will-change:auto}}
+
+
+/* V20 corporate editorial interactions: progressive enhancement for existing data-driven cards */
+.v20-home .services-section,.v20-home .portfolio-section,.v20-home .why-section{position:relative;isolation:isolate}
+.v20-home .service-card,.v20-home .v17-division,.v20-home .why-card{transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s ease,border-color .35s ease}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+ .v20-home .service-card:hover,.v20-home .v17-division:hover,.v20-home .why-card:hover{transform:translateY(-8px);box-shadow:0 25px 55px rgba(38,84,149,.15)}
+ .v20-home .service-card .card-media img{transition:transform .75s cubic-bezier(.22,1,.36,1)}
+ .v20-home .service-card:hover .card-media img{transform:scale(1.045)}
+}
+.v20-home .section-head .display-title{letter-spacing:-.055em}
+.v20-home .services-section .service-card:focus-within,.v20-home .services-section .v17-division:focus-visible{outline:3px solid #3a89e8;outline-offset:4px}
+.v20-home .service-card .service-bottom{transition:color .3s}
+.v20-home .service-card:hover .service-bottom{color:#1c65db}
+@media(prefers-reduced-motion:reduce){.v20-home .service-card,.v20-home .v17-division,.v20-home .why-card,.v20-home .service-card .card-media img{transition:none!important}}
+html.reduce-motion .v20-home .service-card,html.reduce-motion .v20-home .v17-division,html.reduce-motion .v20-home .why-card{transition:none!important}
