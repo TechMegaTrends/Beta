@@ -668,3 +668,21 @@ html.reduce-motion .v20-editorial-display{transform:none!important}
 .v20-home .v17-final-cta a:focus-visible{outline:3px solid #9de6ff;outline-offset:4px}
 @media(max-width:700px){.v20-home .v17-final-cta:before{background-position:72% center}.v20-home .v17-final-cta .v17-cta-layout{gap:30px}}
 @media(prefers-reduced-motion:reduce){.v20-home .portfolio-section .card-media img{transition:none!important}}
+/* V20 London cinematic hero: poster layer, full-strength film, legibility wash */
+.v20-london-poster{position:absolute;inset:0;background:#cfe0f5 url('/media/v20-hero-poster.jpg') 70% center/cover no-repeat}
+.v20-hero-film{opacity:1;object-position:70% center}
+.v20-hero-wash{background:linear-gradient(90deg,rgba(244,249,255,.9) 0%,rgba(240,247,255,.74) 30%,rgba(236,245,255,.28) 55%,rgba(236,245,255,0) 72%),linear-gradient(180deg,rgba(9,14,32,.18) 0%,transparent 22%)}
+.v20-hero-horizon{inset:78% 0 0;background:linear-gradient(transparent,rgba(9,14,32,.55))}
+.v20-home .v20-hero .mono-bottom{color:#e8f1ff!important;text-shadow:0 1px 8px rgba(9,14,32,.6)}
+.v20-home .v20-hero .hero-brand-lockup span{color:#102e66}
+.v20-home .v20-hero .hero-brand-lockup small{color:#375783}
+@media(max-width:900px){.v20-london-poster,.v20-hero-film{background-position:62% center;object-position:62% center}.v20-hero-wash{background:linear-gradient(180deg,rgba(244,249,255,.9) 0%,rgba(240,247,255,.8) 55%,rgba(240,247,255,.35) 100%)}}
+@media(max-width:600px){.v20-hero-film{opacity:1}}
+.v20-home .v20-hero h1{color:#0d2a5e!important;-webkit-text-fill-color:#0d2a5e!important;max-width:900px}
+.v20-home .v20-hero h1 span{background:none!important;color:#2363dc!important;-webkit-text-fill-color:#2363dc!important}
+.v20-home .v20-hero .mono-kicker{color:#1f56c8!important}
+.v20-home .v20-hero .mono-hero-description{color:#22406d!important;font-weight:500}
+.v20-home .v20-hero .mono-hero-description{max-width:560px}
+.v20-home .v20-hero .mono-button-outline{background:rgba(255,255,255,.82)!important;border:1px solid #8fb0e0!important;color:#12346b!important;backdrop-filter:blur(8px)}
+.v20-home .v20-hero .mono-button:not(.mono-button-outline){background:#2469e9!important;color:#fff!important}
+.v20-home .v20-capability-bar .container{color:#274b82}
