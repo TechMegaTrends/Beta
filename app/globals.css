@@ -760,3 +760,12 @@ main :is(.v17-portfolio-note,.v17-service-help) strong{color:var(--v20-ink)!impo
 @media(max-width:900px){.v20-tunnel{left:50%;top:42%}.v20-tunnel-frame{--s:62vw}.v20-tunnel-mist{background:radial-gradient(ellipse 70% 46% at 50% 42%,rgba(26,52,98,.7),rgba(118,154,206,.28) 60%,transparent 85%)}.v20-tunnel-stage .v20-hero-wash{background:linear-gradient(180deg,rgba(244,249,255,.9) 0%,rgba(240,247,255,.82) 60%,rgba(240,247,255,.6) 100%)}}
 @media(prefers-reduced-motion:reduce){.v20-tunnel-frame{animation-play-state:paused}.v20-tunnel-track{transition:none}}
 html.reduce-motion .v20-tunnel-frame{animation-play-state:paused}
+
+/* V20 unique section imagery: each story chapter, editorial panel and the final CTA gets its own photo instead of repeating the hero. */
+.v20-scroll-chapter:nth-child(1) .v20-scroll-city{background-image:linear-gradient(90deg,rgba(7,26,55,.82),rgba(10,36,70,.44) 60%,rgba(10,36,70,.16)),url('/images/v20/sections/story-disconnected.webp');background-position:center;filter:none}
+.v20-scroll-chapter:nth-child(2) .v20-scroll-city{background-image:linear-gradient(90deg,rgba(7,26,55,.82),rgba(10,36,70,.44) 60%,rgba(10,36,70,.16)),url('/images/v20/sections/story-connected.webp');background-position:center;filter:none}
+.v20-scroll-chapter:nth-child(3) .v20-scroll-city{background-image:linear-gradient(90deg,rgba(7,26,55,.82),rgba(10,36,70,.44) 60%,rgba(10,36,70,.16)),url('/images/v20/sections/story-progress.webp');background-position:center;filter:none}
+.v20-editorial-saas .v20-editorial-display-photo{background-image:linear-gradient(150deg,rgba(10,43,89,.08),rgba(33,114,199,.06)),url('/images/v20/sections/editorial-saas.webp');background-position:center;filter:none}
+.v20-editorial-ai .v20-editorial-display-photo{background-image:linear-gradient(150deg,rgba(10,43,89,.08),rgba(33,114,199,.06)),url('/images/v20/sections/editorial-ai.webp');background-position:center;filter:none}
+.v20-editorial-security .v20-editorial-display-photo{background-image:linear-gradient(150deg,rgba(10,43,89,.08),rgba(33,114,199,.06)),url('/images/v20/sections/editorial-security.webp');background-position:center;filter:none}
+.v20-home .v17-final-cta:before{background-image:linear-gradient(90deg,rgba(5,27,59,.88),rgba(5,34,71,.54)),url('/images/v20/sections/cta-london.webp');background-position:center}

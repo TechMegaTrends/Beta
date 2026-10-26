@@ -1,4 +1,4 @@
-// Renders the V20 light-tube tunnel card art (services + projects) to public/images/v20/cards.
+// Renders the V20 light-tube tunnel card art for the portfolio project cards to public/images/v20/cards.
 // Run: node scripts/generate-v20-card-art.mjs
 import sharp from 'sharp';
 import {mkdirSync} from 'node:fs';
@@ -21,14 +21,8 @@ const icons={
  paw:d=>`<ellipse cx="0" cy="42" rx="52" ry="44" fill="${d}"/><ellipse cx="-74" cy="-14" rx="23" ry="29" fill="${d}"/><ellipse cx="-30" cy="-62" rx="23" ry="30" fill="${d}"/><ellipse cx="30" cy="-62" rx="23" ry="30" fill="${d}"/><ellipse cx="74" cy="-14" rx="23" ry="29" fill="${d}"/>`,
  envelope:d=>`<rect x="-112" y="-72" width="224" height="144" rx="14"/><polyline points="-112,-68 0,14 112,-68"/><path d="M0 38 C-10 26 -30 30 -30 46 C-30 62 0 78 0 78 C0 78 30 62 30 46 C30 30 10 26 0 38 Z" fill="${d}"/>`,
 };
+// Project cards only: the seven service cards use photographic images (public/images/v20/cards) made with muapi.
 const cards=[
- {slug:'saas-development',accent:'pink',sides:4,base:8,dir:1,icon:'dashboard'},
- {slug:'websites',accent:'cyan',sides:4,base:-6,dir:-1,icon:'browser'},
- {slug:'mobile-apps',accent:'violet',sides:4,base:0,dir:1,stretch:1.35,icon:'phone'},
- {slug:'hybrid-cloud',accent:'aqua',sides:6,base:0,dir:1,icon:'cloud'},
- {slug:'ai-automation',accent:'orange',sides:3,base:-30,dir:-1,icon:'chip'},
- {slug:'security-risk',accent:'blue',sides:5,base:-18,dir:1,icon:'shield'},
- {slug:'digital-growth',accent:'mint',sides:4,base:14,dir:-1,icon:'growth'},
  {slug:'webcraftgenie',accent:'violet',sides:4,base:20,dir:-1,icon:'genie'},
  {slug:'juras-expeditions',accent:'aqua',sides:5,base:0,dir:1,icon:'compass'},
  {slug:'petcare-plus',accent:'pink',sides:6,base:10,dir:-1,icon:'paw'},
