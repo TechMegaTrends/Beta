@@ -1,0 +1,23 @@
+name: V20 homepage validation
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Check hero media files
+        run: node scripts/check-v20-assets.mjs
+      - name: Build Next.js
+        if: always()
+        run: npm run build
