@@ -686,3 +686,59 @@ html.reduce-motion .v20-editorial-display{transform:none!important}
 .v20-home .v20-hero .mono-button-outline{background:rgba(255,255,255,.82)!important;border:1px solid #8fb0e0!important;color:#12346b!important;backdrop-filter:blur(8px)}
 .v20-home .v20-hero .mono-button:not(.mono-button-outline){background:#2469e9!important;color:#fff!important}
 .v20-home .v20-capability-bar .container{color:#274b82}
+
+/* V20 unified light theme: one look for every page, matching the London landing hero.
+   Placed last so it outranks the legacy dark-theme !important colour rules. */
+:root{--v20-ink:#0d2a5e;--v20-body:#3b5884;--v20-muted:#5a7398;--v20-accent:#2363dc;--v20-line:#d3e2f5;--v20-bg:#f5f9ff;--v20-wash:linear-gradient(90deg,rgba(244,249,255,.95) 0%,rgba(240,247,255,.84) 36%,rgba(236,245,255,.3) 66%,rgba(236,245,255,0) 84%);--v20-wash-mobile:linear-gradient(180deg,rgba(244,249,255,.93),rgba(240,247,255,.82))}
+body{background:var(--v20-bg)!important;color:var(--v20-ink)}
+main{background:var(--v20-bg)}
+main :is(h1,h2,h3,h4,.display-title){color:var(--v20-ink)!important;-webkit-text-fill-color:currentColor}
+main :is(.mono-highlight,.gradient-text){background:none!important;color:var(--v20-accent)!important;-webkit-text-fill-color:var(--v20-accent)!important}
+main :is(p,li,.large-paragraph,.muted-paragraph){color:var(--v20-body)!important}
+main :is(.eyebrow,.section-label,.mono-kicker,.stage-tag,.v20-overline){color:var(--v20-accent)!important}
+main :is(.text-link,.v17-service-caption a,.page-prose a,.legal-content a){color:var(--v20-accent)!important}
+
+/* Page heroes: bright London skyline with a light wash behind navy text */
+main .page-hero-imaged{background:var(--v20-wash),url('/media/v20-hero-poster.jpg') 70% center/cover no-repeat #e9f2ff!important}
+main .page-hero-imaged:before{display:none}
+.page-hero.v20-inner-hero .v20-engineering-motion{opacity:1}
+.page-hero.v20-inner-hero .v20-engineering-city{background-image:var(--v20-wash),url('/media/v20-hero-poster.jpg')}
+.page-hero.v20-inner-hero .v20-engineering-grid{opacity:.2}
+main .page-hero h1{font-size:clamp(40px,5.6vw,84px)!important;letter-spacing:-.045em;line-height:1.04;max-width:880px}
+main .page-hero p:not(.eyebrow){max-width:600px;font-weight:500}
+
+/* Cards and panels: white surfaces with a soft blue edge */
+main :is(.service-card,.why-card,.process-step,.simple-card,.v17-division,.info-box,.empty-note,.project-card,.cybersecurity-feature,.legal-content,.page-prose,.v17-trust-grid>*){background:#fff!important;border:1px solid var(--v20-line)!important;box-shadow:0 18px 44px rgba(24,70,134,.08)!important;color:var(--v20-ink)!important}
+main :is(.service-card,.why-card,.process-step,.simple-card,.v17-division,.info-box,.project-card,.cybersecurity-feature) :is(span,small,b,.service-eyebrow,.why-number,.project-kind){color:var(--v20-muted)!important}
+main :is(.service-card,.why-card,.v17-division,.simple-card,.cybersecurity-feature) svg{color:var(--v20-accent)}
+main .industry-tags a{background:#fff!important;border:1px solid var(--v20-line)!important;color:var(--v20-ink)!important}
+main .industry-tags a span{color:var(--v20-accent)!important}
+main :is(.field input,.field textarea,.field select,input,textarea,select){background:#fff!important;border:1px solid #bcd0ec!important;color:var(--v20-ink)!important}
+main :is(input,textarea)::placeholder{color:#7d93b4!important}
+main :is(label,.field>span,.form-note){color:var(--v20-body)!important}
+
+/* Dark photo bands keep white text */
+main :is(.v20-scroll-overlay,.v17-final-cta,.v20-editorial-metric,.ticker) :is(h1,h2,h3,p,span,strong,.display-title,.eyebrow,.section-label){color:#fff!important;-webkit-text-fill-color:#fff!important}
+main .v17-final-cta .mono-highlight{color:#a9dcff!important;-webkit-text-fill-color:#a9dcff!important}
+main .v20-scroll-overlay p{color:#e3eefc!important}
+main .v20-scroll-footer strong{color:var(--v20-ink)!important}
+
+@media(max-width:768px){main .page-hero-imaged{background:var(--v20-wash-mobile),url('/media/v20-hero-poster.jpg') 64% center/cover no-repeat #e9f2ff!important}.page-hero.v20-inner-hero .v20-engineering-city{background-image:var(--v20-wash-mobile),url('/media/v20-hero-poster.jpg')}main .page-hero h1{font-size:clamp(34px,10vw,52px)!important;letter-spacing:-.04em}}
+main :is(.offering-card,.v17-service-help,.v17-portfolio-note){background:#fff!important;border:1px solid var(--v20-line)!important;box-shadow:0 18px 44px rgba(24,70,134,.08)}
+main .offering-card span,main .service-card .service-bottom,main .service-card .service-icon{color:var(--v20-accent)!important}
+main .contact-band{position:relative;isolation:isolate;background:linear-gradient(90deg,rgba(5,27,59,.9),rgba(5,34,71,.62)),url('/media/v20-hero-poster.jpg') center 57%/cover no-repeat #0b3168!important}
+main .contact-band :is(h2,p,.eyebrow,.section-label){color:#fff!important;-webkit-text-fill-color:#fff!important}
+main .contact-band .gradient-text,main .contact-band .mono-highlight{color:#a9dcff!important;-webkit-text-fill-color:#a9dcff!important}
+main .page-content{color:var(--v20-ink)}
+main .contact-form{background:#fff!important;border:1px solid var(--v20-line)!important;box-shadow:0 22px 52px rgba(24,70,134,.1)!important;color:var(--v20-ink)!important}
+main .contact-side a,main .contact-form a{color:var(--v20-accent)!important}
+main .contact-side svg{color:var(--v20-accent)}
+main .service-detail-caption :is(h2,p){color:#fff!important;-webkit-text-fill-color:#fff!important}
+main .service-detail-caption span{color:#a9dcff!important}
+main .project-card.project-card-image,main .simple-card.visual-card{background:#fff!important;border:1px solid var(--v20-line)!important;box-shadow:0 18px 44px rgba(24,70,134,.08)!important}
+main .project-info p{color:var(--v20-body)!important}
+main .circle-small{border-color:var(--v20-line)!important;color:var(--v20-accent)!important}
+main :is(.portfolio-card,.product-card){background:#fff!important;border:1px solid var(--v20-line)!important;color:var(--v20-ink)!important}
+main .gallery-controls :is(span,b){color:var(--v20-muted)!important}
+main .gallery-controls button{border-color:var(--v20-line)!important;color:var(--v20-accent)!important;background:#fff!important}
+main :is(.v17-portfolio-note,.v17-service-help) strong{color:var(--v20-ink)!important}
