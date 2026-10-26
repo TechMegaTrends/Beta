@@ -769,3 +769,14 @@ html.reduce-motion .v20-tunnel-frame{animation-play-state:paused}
 .v20-editorial-ai .v20-editorial-display-photo{background-image:linear-gradient(150deg,rgba(10,43,89,.08),rgba(33,114,199,.06)),url('/images/v20/sections/editorial-ai.webp');background-position:center;filter:none}
 .v20-editorial-security .v20-editorial-display-photo{background-image:linear-gradient(150deg,rgba(10,43,89,.08),rgba(33,114,199,.06)),url('/images/v20/sections/editorial-security.webp');background-position:center;filter:none}
 .v20-home .v17-final-cta:before{background-image:linear-gradient(90deg,rgba(5,27,59,.88),rgba(5,34,71,.54)),url('/images/v20/sections/cta-london.webp');background-position:center}
+
+/* V20 demo preview: keep its dark "screen" readable and on-brand (navy + electric blue instead of purple). */
+main .demo-playground{background:linear-gradient(160deg,#0f2a57,#0a1c3d)!important;border:1px solid rgba(120,170,240,.35)!important;box-shadow:0 30px 70px rgba(18,52,107,.28)!important}
+main .demo-toolbar button{color:#c4d6f2}
+main .demo-toolbar button[aria-selected=true]{background:rgba(64,128,230,.32);border-color:rgba(140,190,255,.6);color:#fff}
+main .demo-stage{background:radial-gradient(circle at 65% 30%,#2f7be8,#123673 55%,#0a1c3d 100%)}
+main .demo-playground :is(h1,h2,h3,h4){color:#fff!important;-webkit-text-fill-color:#fff!important}
+main .demo-playground :is(p,li){color:#d3e2f7!important}
+main .demo-playground em{color:#a9dcff!important;-webkit-text-fill-color:#a9dcff!important}
+main .demo-playground .demo-phone :is(h1,h2,h3,h4){color:#21223b!important;-webkit-text-fill-color:#21223b!important}
+main .demo-playground .demo-phone :is(p,li){color:#5a6178!important}
