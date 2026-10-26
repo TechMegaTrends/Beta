@@ -742,3 +742,21 @@ main :is(.portfolio-card,.product-card){background:#fff!important;border:1px sol
 main .gallery-controls :is(span,b){color:var(--v20-muted)!important}
 main .gallery-controls button{border-color:var(--v20-line)!important;color:var(--v20-accent)!important;background:#fff!important}
 main :is(.v17-portfolio-note,.v17-service-help) strong{color:var(--v20-ink)!important}
+
+/* V20 hero: 3D light-tube tunnel. Frames travel from far to near while rotating, creating a spiral. */
+.v20-tunnel-mist{position:absolute;inset:0;background:radial-gradient(ellipse 46% 58% at 69% 50%,rgba(26,52,98,.92) 0%,rgba(47,82,140,.72) 34%,rgba(118,154,206,.38) 62%,rgba(226,237,251,0) 86%)}
+.v20-tunnel{position:absolute;left:69%;top:50%;width:0;height:0;perspective:760px;transform-style:preserve-3d}
+.v20-tunnel-track{position:absolute;transform-style:preserve-3d;transform:rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg));transition:transform .6s cubic-bezier(.22,1,.36,1)}
+.v20-tunnel-frame{--s:min(30vw,420px);position:absolute;left:calc(var(--s)/-2);top:calc(var(--s)/-2);width:var(--s);height:var(--s);transform-style:preserve-3d;opacity:0;animation:v20-tunnel-fly 24s linear infinite;will-change:transform,opacity}
+.v20-tunnel-frame i{position:absolute;border-radius:6px;background:linear-gradient(90deg,#d9f1ff,#fff 30%,#fff 70%,#d9f1ff);box-shadow:0 0 6px #fff,0 0 18px rgba(150,212,255,.95),0 0 46px rgba(64,140,255,.75)}
+.v20-tunnel-frame i:nth-child(1){left:6%;right:6%;top:0;height:7px}
+.v20-tunnel-frame i:nth-child(2){left:6%;right:6%;bottom:0;height:7px}
+.v20-tunnel-frame i:nth-child(3){top:6%;bottom:6%;left:0;width:7px;background:linear-gradient(180deg,#d9f1ff,#fff 30%,#fff 70%,#d9f1ff)}
+.v20-tunnel-frame i:nth-child(4){top:6%;bottom:6%;right:0;width:7px;background:linear-gradient(180deg,#d9f1ff,#fff 30%,#fff 70%,#d9f1ff)}
+@keyframes v20-tunnel-fly{0%{transform:translateZ(-2600px) rotateZ(0deg);opacity:0}14%{opacity:.85}78%{opacity:1}100%{transform:translateZ(520px) rotateZ(150deg);opacity:0}}
+.v20-tunnel-floor{position:absolute;left:28%;right:-10%;bottom:-6%;height:34%;background:radial-gradient(ellipse 50% 60% at 50% 30%,rgba(191,229,255,.55),rgba(80,140,230,.18) 45%,transparent 72%);filter:blur(6px)}
+.v20-tunnel-stage .v20-london-poster{opacity:.45}
+.v20-tunnel-stage .v20-hero-wash{background:linear-gradient(90deg,rgba(244,249,255,.96) 0%,rgba(240,247,255,.86) 30%,rgba(236,245,255,.22) 52%,rgba(236,245,255,0) 64%)}
+@media(max-width:900px){.v20-tunnel{left:50%;top:42%}.v20-tunnel-frame{--s:62vw}.v20-tunnel-mist{background:radial-gradient(ellipse 70% 46% at 50% 42%,rgba(26,52,98,.7),rgba(118,154,206,.28) 60%,transparent 85%)}.v20-tunnel-stage .v20-hero-wash{background:linear-gradient(180deg,rgba(244,249,255,.9) 0%,rgba(240,247,255,.82) 60%,rgba(240,247,255,.6) 100%)}}
+@media(prefers-reduced-motion:reduce){.v20-tunnel-frame{animation-play-state:paused}.v20-tunnel-track{transition:none}}
+html.reduce-motion .v20-tunnel-frame{animation-play-state:paused}
