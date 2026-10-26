@@ -780,3 +780,5 @@ main .demo-playground :is(p,li){color:#d3e2f7!important}
 main .demo-playground em{color:#a9dcff!important;-webkit-text-fill-color:#a9dcff!important}
 main .demo-playground .demo-phone :is(h1,h2,h3,h4){color:#21223b!important;-webkit-text-fill-color:#21223b!important}
 main .demo-playground .demo-phone :is(p,li){color:#5a6178!important}
+main .legal-content,main .page-prose{padding:clamp(28px,4vw,56px)!important;border-radius:24px}
+main .legal-content h2:first-child{margin-top:0}
