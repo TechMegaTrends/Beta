@@ -830,51 +830,84 @@ html.reduce-motion .cine-caption{animation:none}
 
 /* V20 cinematic homepage: every section after the hero follows the hero's film look —
    near-black, serif headlines with italic blue accents, mono labels, hairlines, square outlined controls.
-   Scoped to main.cine-page so it outranks the site-wide light theme on the homepage only. */
-main.cine-page{--c-bg:#07090f;--c-surface:rgba(239,236,230,.025);--c-line:rgba(239,236,230,.1);--c-text:#efece6;--c-body:#c2c7d1;--c-muted:#8a93a6;--c-accent:#9cc2ff;--c-accent-strong:#4d8dff;background:var(--c-bg)!important;color:var(--c-text)}
-main.cine-page>section:not(.cine-hero),main.cine-page>div:not(.cine-hero),main.cine-page .v20-scroll-story,main.cine-page .v20-scroll-intro,main.cine-page .v20-editorial-showcase,main.cine-page .v20-editorial-panel,main.cine-page .portfolio-section,main.cine-page .v20-transformation{background:var(--c-bg)!important;color:var(--c-text)}
-main.cine-page .section,main.cine-page .v20-editorial-panel{border-top:1px solid var(--c-line)}
-main.cine-page .section::before,main.cine-page .portfolio-section::before{display:none!important}
+   Scoped to .cine-site main so it outranks the site-wide light theme on the homepage only. */
+.cine-site main{--c-bg:#07090f;--c-surface:rgba(239,236,230,.025);--c-line:rgba(239,236,230,.1);--c-text:#efece6;--c-body:#c2c7d1;--c-muted:#8a93a6;--c-accent:#9cc2ff;--c-accent-strong:#4d8dff;background:var(--c-bg)!important;color:var(--c-text)}
+.cine-site main>section:not(.cine-hero):not(.page-hero),.cine-site main>div:not(.cine-hero):not(.page-hero),.cine-site main .v20-scroll-story,.cine-site main .v20-scroll-intro,.cine-site main .v20-editorial-showcase,.cine-site main .v20-editorial-panel,.cine-site main .portfolio-section,.cine-site main .v20-transformation{background:var(--c-bg)!important;color:var(--c-text)}
+.cine-site main .section,.cine-site main .v20-editorial-panel{border-top:1px solid var(--c-line)}
+.cine-site main .section::before,.cine-site main .portfolio-section::before{display:none!important}
 
 /* type */
-main.cine-page :is(h2,h3,.display-title){color:var(--c-text)!important;-webkit-text-fill-color:currentColor}
-main.cine-page :is(h2,.display-title){font-family:var(--cine-serif),Georgia,serif!important;font-weight:400!important;letter-spacing:-.02em!important;line-height:1!important}
-main.cine-page .display-title,main.cine-page .v20-scroll-intro h2,main.cine-page .v20-editorial-copy h2{font-size:clamp(44px,5.6vw,92px)!important}
-main.cine-page h3{font-family:var(--cine-serif),Georgia,serif;font-weight:400!important;letter-spacing:-.01em!important}
-main.cine-page :is(.mono-highlight,.gradient-text,h2 span,.v20-scroll-intro h2 span){font-family:var(--cine-serif),Georgia,serif;font-style:italic;background:none!important;color:var(--c-accent)!important;-webkit-text-fill-color:var(--c-accent)!important}
-main.cine-page :is(p,li,.large-paragraph,.muted-paragraph){color:var(--c-body)!important}
-main.cine-page :is(.eyebrow,.section-label,.v20-overline,.v20-editorial-index,.v20-scroll-number,.service-eyebrow,.project-kind,.why-number,.v17-division>span,.service-top span,.service-bottom,.gallery-controls span){font-family:var(--cine-mono),monospace!important;font-weight:500!important;font-size:11px!important;letter-spacing:.22em!important;text-transform:uppercase;color:var(--c-muted)!important}
-main.cine-page .eyebrow-dot{background:var(--c-accent-strong)!important;box-shadow:0 0 10px var(--c-accent-strong)!important;width:6px;height:6px}
-main.cine-page :is(.text-link,.v20-editorial-action,.v17-service-caption a){font-family:var(--cine-mono),monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--c-accent)!important;border-color:rgba(156,194,255,.4)!important}
+.cine-site main :is(h2,h3,.display-title){color:var(--c-text)!important;-webkit-text-fill-color:currentColor}
+.cine-site main :is(h2,.display-title){font-family:var(--cine-serif),Georgia,serif!important;font-weight:400!important;letter-spacing:-.02em!important;line-height:1!important}
+.cine-site main .display-title,.cine-site main .v20-scroll-intro h2,.cine-site main .v20-editorial-copy h2{font-size:clamp(44px,5.6vw,92px)!important}
+.cine-site main h3{font-family:var(--cine-serif),Georgia,serif;font-weight:400!important;letter-spacing:-.01em!important}
+.cine-site main :is(.mono-highlight,.gradient-text,h2 span,.v20-scroll-intro h2 span){font-family:var(--cine-serif),Georgia,serif;font-style:italic;background:none!important;color:var(--c-accent)!important;-webkit-text-fill-color:var(--c-accent)!important}
+.cine-site main :is(p,li,.large-paragraph,.muted-paragraph){color:var(--c-body)!important}
+.cine-site main :is(.eyebrow,.section-label,.v20-overline,.v20-editorial-index,.v20-scroll-number,.service-eyebrow,.project-kind,.why-number,.v17-division>span,.service-top span,.service-bottom,.gallery-controls span){font-family:var(--cine-mono),monospace!important;font-weight:500!important;font-size:11px!important;letter-spacing:.22em!important;text-transform:uppercase;color:var(--c-muted)!important}
+.cine-site main .eyebrow-dot{background:var(--c-accent-strong)!important;box-shadow:0 0 10px var(--c-accent-strong)!important;width:6px;height:6px}
+.cine-site main :is(.text-link,.v20-editorial-action,.v17-service-caption a){font-family:var(--cine-mono),monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--c-accent)!important;border-color:rgba(156,194,255,.4)!important}
 
 /* buttons: square, mono, outlined like the hero */
-main.cine-page :is(.mono-button,.v20-scroll-footer a,.v20-transformation-end a){border-radius:0!important;background:transparent!important;border:1px solid #3b7ff0!important;color:var(--c-accent)!important;box-shadow:none!important;font-family:var(--cine-mono),monospace!important;font-size:12px!important;font-weight:500!important;letter-spacing:.18em;text-transform:uppercase}
-main.cine-page :is(.mono-button,.v20-scroll-footer a):hover{background:#2363dc!important;border-color:#2363dc!important;color:#fff!important}
-main.cine-page .mono-button-outline{border-color:rgba(239,236,230,.7)!important;color:var(--c-text)!important}
-main.cine-page .mono-button-outline:hover{background:var(--c-text)!important;color:var(--c-bg)!important}
+.cine-site main :is(.mono-button,.v20-scroll-footer a,.v20-transformation-end a){border-radius:0!important;background:transparent!important;border:1px solid #3b7ff0!important;color:var(--c-accent)!important;box-shadow:none!important;font-family:var(--cine-mono),monospace!important;font-size:12px!important;font-weight:500!important;letter-spacing:.18em;text-transform:uppercase}
+.cine-site main :is(.mono-button,.v20-scroll-footer a):hover{background:#2363dc!important;border-color:#2363dc!important;color:#fff!important}
+.cine-site main .mono-button-outline{border-color:rgba(239,236,230,.7)!important;color:var(--c-text)!important}
+.cine-site main .mono-button-outline:hover{background:var(--c-text)!important;color:var(--c-bg)!important}
 
 /* cards and panels: hairline frames instead of white cards */
-main.cine-page :is(.service-card,.v17-division,.why-card,.process-step,.project-card.project-card-image,.cybersecurity-feature,.v20-transform-card){background:var(--c-surface)!important;border:1px solid var(--c-line)!important;border-radius:0!important;box-shadow:none!important;color:var(--c-text)!important}
-main.cine-page :is(.service-card,.v17-division,.why-card,.project-card):hover{border-color:rgba(156,194,255,.45)!important;box-shadow:none!important}
-main.cine-page :is(.service-card,.why-card,.v17-division,.cybersecurity-feature) svg,main.cine-page .service-icon{color:var(--c-accent)!important}
-main.cine-page :is(.card-media,.project-thumb,.v20-editorial-display,.card-media img){border-radius:0!important}
-main.cine-page .v20-editorial-display{border:1px solid var(--c-line)!important;box-shadow:none!important}
-main.cine-page .industry-tags a{background:transparent!important;border:0!important;border-top:1px solid var(--c-line)!important;border-radius:0!important;color:var(--c-text)!important;font-family:var(--cine-serif),Georgia,serif;font-size:clamp(26px,2.6vw,40px)}
-main.cine-page .industry-tags a:hover{color:var(--c-accent)!important}
-main.cine-page .industry-tags a span{font-family:var(--cine-mono),monospace;font-size:11px;letter-spacing:.2em;color:var(--c-muted)!important}
-main.cine-page .process-step b,main.cine-page .why-number{color:var(--c-accent)!important}
-main.cine-page .gallery-controls button{border-radius:0!important;background:transparent!important;border:1px solid var(--c-line)!important;color:var(--c-text)!important}
-main.cine-page .circle-small{border-color:var(--c-line)!important;color:var(--c-accent)!important}
+.cine-site main :is(.service-card,.v17-division,.why-card,.process-step,.project-card.project-card-image,.cybersecurity-feature,.v20-transform-card){background:var(--c-surface)!important;border:1px solid var(--c-line)!important;border-radius:0!important;box-shadow:none!important;color:var(--c-text)!important}
+.cine-site main :is(.service-card,.v17-division,.why-card,.project-card):hover{border-color:rgba(156,194,255,.45)!important;box-shadow:none!important}
+.cine-site main :is(.service-card,.why-card,.v17-division,.cybersecurity-feature) svg,.cine-site main .service-icon{color:var(--c-accent)!important}
+.cine-site main :is(.card-media,.project-thumb,.v20-editorial-display,.card-media img){border-radius:0!important}
+.cine-site main .v20-editorial-display{border:1px solid var(--c-line)!important;box-shadow:none!important}
+.cine-site main .industry-tags a{background:transparent!important;border:0!important;border-top:1px solid var(--c-line)!important;border-radius:0!important;color:var(--c-text)!important;font-family:var(--cine-serif),Georgia,serif;font-size:clamp(26px,2.6vw,40px)}
+.cine-site main .industry-tags a:hover{color:var(--c-accent)!important}
+.cine-site main .industry-tags a span{font-family:var(--cine-mono),monospace;font-size:11px;letter-spacing:.2em;color:var(--c-muted)!important}
+.cine-site main .process-step b,.cine-site main .why-number{color:var(--c-accent)!important}
+.cine-site main .gallery-controls button{border-radius:0!important;background:transparent!important;border:1px solid var(--c-line)!important;color:var(--c-text)!important}
+.cine-site main .circle-small{border-color:var(--c-line)!important;color:var(--c-accent)!important}
 
 /* strips and bands */
-main.cine-page .v20-capability-bar,main.cine-page .ticker{background:var(--c-bg)!important;border-block:1px solid var(--c-line)!important}
-main.cine-page .v20-capability-bar .container,main.cine-page .v20-capability-bar a,main.cine-page .ticker span{font-family:var(--cine-mono),monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--c-muted)!important}
-main.cine-page .v20-capability-bar a{color:var(--c-accent)!important}
-main.cine-page .ticker b{color:var(--c-accent-strong)!important}
-main.cine-page .v20-scroll-footer strong{color:var(--c-text)!important;font-family:var(--cine-serif),Georgia,serif;font-weight:400;font-size:clamp(28px,3vw,44px)}
-main.cine-page .v20-scroll-overlay h3{font-size:clamp(46px,6vw,96px)!important}
-main.cine-page .v17-final-cta{border-top:1px solid var(--c-line)}
-main.cine-page .v17-final-cta::before{opacity:.55!important}
-main.cine-page .demo-playground{border-radius:0!important}
-main.cine-page .demo-stage{border-radius:0}
-main.cine-page :is(.process-step,.why-card,.service-card,.v17-division,.project-card,.cybersecurity-feature)::before,main.cine-page :is(.process-step,.why-card,.service-card,.v17-division)::after{display:none!important}
+.cine-site main .v20-capability-bar,.cine-site main .ticker{background:var(--c-bg)!important;border-block:1px solid var(--c-line)!important}
+.cine-site main .v20-capability-bar .container,.cine-site main .v20-capability-bar a,.cine-site main .ticker span{font-family:var(--cine-mono),monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--c-muted)!important}
+.cine-site main .v20-capability-bar a{color:var(--c-accent)!important}
+.cine-site main .ticker b{color:var(--c-accent-strong)!important}
+.cine-site main .v20-scroll-footer strong{color:var(--c-text)!important;font-family:var(--cine-serif),Georgia,serif;font-weight:400;font-size:clamp(28px,3vw,44px)}
+.cine-site main .v20-scroll-overlay h3{font-size:clamp(46px,6vw,96px)!important}
+.cine-site main .v17-final-cta{border-top:1px solid var(--c-line)}
+.cine-site main .v17-final-cta::before{opacity:.55!important}
+.cine-site main .demo-playground{border-radius:0!important}
+.cine-site main .demo-stage{border-radius:0}
+.cine-site main :is(.process-step,.why-card,.service-card,.v17-division,.project-card,.cybersecurity-feature)::before,.cine-site main :is(.process-step,.why-card,.service-card,.v17-division)::after{display:none!important}
+
+/* Inner pages in the cinematic look: dark London headers, serif titles, hairline panels and dark forms. */
+.cine-site main .page-hero-imaged{background:linear-gradient(90deg,rgba(7,9,15,.96) 0%,rgba(7,9,15,.84) 38%,rgba(7,9,15,.45) 72%,rgba(7,9,15,.6) 100%),linear-gradient(0deg,rgba(7,9,15,.9) 0%,rgba(7,9,15,0) 35%),url('/media/v20-hero-poster.jpg') 70% center/cover no-repeat #07090f!important;border-bottom:1px solid var(--c-line)}
+.cine-site main .page-hero.v20-inner-hero .v20-engineering-city{background-image:linear-gradient(90deg,rgba(7,9,15,.96) 0%,rgba(7,9,15,.84) 38%,rgba(7,9,15,.45) 72%,rgba(7,9,15,.6) 100%),linear-gradient(0deg,rgba(7,9,15,.9) 0%,rgba(7,9,15,0) 35%),url('/media/v20-hero-poster.jpg')}
+.cine-site main .page-hero.v20-inner-hero .v20-engineering-grid{opacity:.12}
+.cine-site main .page-hero h1{font-family:var(--cine-serif),Georgia,serif!important;font-weight:400!important;letter-spacing:-.02em!important;line-height:.98!important;font-size:clamp(48px,6.6vw,104px)!important;color:var(--c-text)!important;-webkit-text-fill-color:currentColor}
+.cine-site main .page-hero h1 :is(span,.gradient-text){font-style:italic;color:var(--c-accent)!important;-webkit-text-fill-color:var(--c-accent)!important}
+.cine-site main :is(h1,h4){color:var(--c-text)!important;-webkit-text-fill-color:currentColor}
+
+/* panels, cards and lists used on inner pages */
+.cine-site main :is(.legal-content,.page-prose,.contact-form,.info-box,.empty-note,.simple-card.visual-card,.offering-card,.v17-service-help,.v17-portfolio-note,.v17-trust-grid>*,.about-visual-box,.detail-grid>div>.info-box){background:var(--c-surface)!important;border:1px solid var(--c-line)!important;border-radius:0!important;box-shadow:none!important;color:var(--c-text)!important}
+.cine-site main :is(.legal-content,.page-prose) h2{font-size:clamp(26px,2.4vw,34px)!important}
+.cine-site main :is(.offering-card span,.product-status,.offering-heading span,.back-link){font-family:var(--cine-mono),monospace!important;font-size:11px!important;letter-spacing:.2em!important;text-transform:uppercase;color:var(--c-muted)!important}
+.cine-site main .back-link{color:var(--c-accent)!important}
+.cine-site main :is(.v17-service-help,.v17-portfolio-note) strong{color:var(--c-text)!important}
+.cine-site main :is(.feature-list li,.info-list>*){border-color:var(--c-line)!important}
+.cine-site main :is(.card-media,.service-detail-showcase,.service-detail-image,.contact-media,.info-hero-media,.product-media,.industry-media,.offering-photo,.project-detail-art){border-radius:0!important}
+.cine-site main .service-detail-showcase{border:1px solid var(--c-line)}
+
+/* contact form */
+.cine-site main :is(.field input,.field textarea,.field select,input,textarea,select){background:rgba(239,236,230,.03)!important;border:1px solid rgba(239,236,230,.18)!important;border-radius:0!important;color:var(--c-text)!important}
+.cine-site main :is(.field input,.field textarea,.field select,input,textarea,select):focus{border-color:#4d8dff!important;outline:none;box-shadow:0 0 0 3px rgba(77,141,255,.2)!important}
+.cine-site main :is(input,textarea)::placeholder{color:#6d7587!important}
+.cine-site main select option{background:#0d1119;color:var(--c-text)}
+.cine-site main :is(label,.field>span){font-family:var(--cine-mono),monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--c-muted)!important}
+.cine-site main .form-note{color:var(--c-muted)!important}
+.cine-site main :is(.contact-side a,.contact-form a){color:var(--c-accent)!important}
+.cine-site main :is(.contact-form button,.btn){border-radius:0!important;background:transparent!important;border:1px solid #3b7ff0!important;color:var(--c-accent)!important;font-family:var(--cine-mono),monospace!important;font-size:12px!important;letter-spacing:.18em;text-transform:uppercase;box-shadow:none!important}
+.cine-site main :is(.contact-form button,.btn):hover{background:#2363dc!important;color:#fff!important}
+.cine-site main .contact-band{border-top:1px solid var(--c-line)}
+
+@media(max-width:768px){.cine-site main .page-hero-imaged{background:linear-gradient(180deg,rgba(7,9,15,.85),rgba(7,9,15,.9)),url('/media/v20-hero-poster.jpg') 64% center/cover no-repeat #07090f!important}.cine-site main .page-hero.v20-inner-hero .v20-engineering-city{background-image:linear-gradient(180deg,rgba(7,9,15,.85),rgba(7,9,15,.9)),url('/media/v20-hero-poster.jpg')}}
+.cine-site main select{appearance:none;-webkit-appearance:none;color-scheme:dark;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%239cc2ff' stroke-width='1.5'/%3E%3C/svg%3E")!important;background-repeat:no-repeat!important;background-position:right 16px center!important;padding-right:42px!important}

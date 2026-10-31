@@ -2,7 +2,6 @@
 import {useEffect,useRef,useState} from 'react';
 import Link from 'next/link';
 import {ArrowUpRight} from 'lucide-react';
-import {cineSerif,cineMono} from '@/lib/fonts';
 // Cinematic "viewfinder" hero with an explainer tour: an isometric studio cutaway, then one room per process step.
 const chapters=[
  {id:'studio',label:'The studio',caption:'Welcome to TechMegaTrends.'},
@@ -30,7 +29,7 @@ export default function V20CinemaHero(){
   const tick=()=>{const t=(performance.now()-start)/1000;el.textContent=`${pad(Math.floor(t/3600))}:${pad(Math.floor(t/60)%60)}:${pad(Math.floor(t)%60)}:${pad(Math.floor((t%1)*24))}`;raf=requestAnimationFrame(tick)};
   raf=requestAnimationFrame(tick);return()=>cancelAnimationFrame(raf)},[still]);
  const next=(active+1)%chapters.length;
- return <section ref={hero} className={`cine-hero ${cineSerif.variable} ${cineMono.variable}`} aria-labelledby="cine-hero-title">
+ return <section ref={hero} className="cine-hero" aria-labelledby="cine-hero-title">
   <div className="cine-tour" aria-hidden="true">
    {chapters.map((c,i)=><video key={c.id} ref={el=>{videos.current[i]=el}} className={i===active?'is-active':''} muted playsInline preload={i===active||i===next?'auto':'none'} poster={`/media/tour/${c.id}.webp`}
     onTimeUpdate={e=>{if(i===active)setProgress(e.currentTarget.currentTime/(e.currentTarget.duration||5))}} onEnded={e=>{if(i===active&&e.currentTarget.currentTime>1)setActive(next)}}>
