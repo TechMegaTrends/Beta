@@ -16,17 +16,17 @@ export const projects=[
 ];
 export const features=[{icon:Rocket,title:'Forward-thinking design',text:'Memorable experiences grounded in real business goals.'},{icon:Cloud,title:'Engineering expertise',text:'From product engineering to secure cloud delivery and practical risk controls.'},{icon:HeartHandshake,title:'A long-term technology partner',text:'We focus on lasting value, not just launch day.'},{icon:Palette,title:'Built around your brand',text:'A thoughtful solution that feels distinctively yours.'}];
 export const products=[
- {title:'WebCraftGenie',tag:'IN DEVELOPMENT',text:'AI-assisted digital presence and website creation concepts.',image:'/images/cards/webcraftgenie.webp'},
- {title:'Invita Event Craft',tag:'DEVELOPMENT SHOWCASE',text:'Digital invitations, RSVPs and modern guest management.',image:'/images/cards/invita-event-craft.webp'},
- {title:'PetCare+',tag:'BETA / DEVELOPMENT',text:'An approachable digital experience for pet services and care.',image:'/images/cards/petcare-plus.webp'}
+ {title:'WebCraftGenie',tag:'IN DEVELOPMENT',text:'AI-assisted digital presence and website creation concepts.',image:'/images/v20/cards/webcraftgenie.webp'},
+ {title:'Invita Event Craft',tag:'DEVELOPMENT SHOWCASE',text:'Digital invitations, RSVPs and modern guest management.',image:'/images/v20/cards/invita-event-craft.webp'},
+ {title:'PetCare+',tag:'BETA / DEVELOPMENT',text:'An approachable digital experience for pet services and care.',image:'/images/v20/cards/petcare-plus.webp'}
 ];
 export const industries=[
- {name:'Professional services',image:'/images/pages/services.webp'},
- {name:'Travel & hospitality',image:'/images/pages/websites.webp'},
- {name:'Retail & e-commerce',image:'/images/pages/portfolio.webp'},
- {name:'Healthcare & wellbeing',image:'/images/pages/mobile.webp'},
- {name:'Education & training',image:'/images/pages/ai.webp'},
- {name:'Property & real estate',image:'/images/pages/cloud.webp'},
- {name:'Startups & SaaS',image:'/images/pages/saas.webp'},
- {name:'Local service businesses',image:'/images/pages/contact.webp'}
+ {name:'Professional services',image:'/images/v20/pages/industry-professional-services.webp'},
+ {name:'Travel & hospitality',image:'/images/v20/pages/industry-travel-hospitality.webp'},
+ {name:'Retail & e-commerce',image:'/images/v20/pages/industry-retail-ecommerce.webp'},
+ {name:'Healthcare & wellbeing',image:'/images/v20/pages/industry-healthcare-wellbeing.webp'},
+ {name:'Education & training',image:'/images/v20/pages/industry-education-training.webp'},
+ {name:'Property & real estate',image:'/images/v20/pages/industry-property-real-estate.webp'},
+ {name:'Startups & SaaS',image:'/images/v20/pages/industry-startups-saas.webp'},
+ {name:'Local service businesses',image:'/images/v20/pages/industry-local-services.webp'}
 ];
