@@ -827,3 +827,54 @@ main .cine-hero .cine-caption{color:#fff!important}
 @media(prefers-reduced-motion:reduce){.cine-tour video{transition:none}.cine-caption{animation:none}}
 html.reduce-motion .cine-tour video{transition:none}
 html.reduce-motion .cine-caption{animation:none}
+
+/* V20 cinematic homepage: every section after the hero follows the hero's film look —
+   near-black, serif headlines with italic blue accents, mono labels, hairlines, square outlined controls.
+   Scoped to main.cine-page so it outranks the site-wide light theme on the homepage only. */
+main.cine-page{--c-bg:#07090f;--c-surface:rgba(239,236,230,.025);--c-line:rgba(239,236,230,.1);--c-text:#efece6;--c-body:#c2c7d1;--c-muted:#8a93a6;--c-accent:#9cc2ff;--c-accent-strong:#4d8dff;background:var(--c-bg)!important;color:var(--c-text)}
+main.cine-page>section:not(.cine-hero),main.cine-page>div:not(.cine-hero),main.cine-page .v20-scroll-story,main.cine-page .v20-scroll-intro,main.cine-page .v20-editorial-showcase,main.cine-page .v20-editorial-panel,main.cine-page .portfolio-section,main.cine-page .v20-transformation{background:var(--c-bg)!important;color:var(--c-text)}
+main.cine-page .section,main.cine-page .v20-editorial-panel{border-top:1px solid var(--c-line)}
+main.cine-page .section::before,main.cine-page .portfolio-section::before{display:none!important}
+
+/* type */
+main.cine-page :is(h2,h3,.display-title){color:var(--c-text)!important;-webkit-text-fill-color:currentColor}
+main.cine-page :is(h2,.display-title){font-family:var(--cine-serif),Georgia,serif!important;font-weight:400!important;letter-spacing:-.02em!important;line-height:1!important}
+main.cine-page .display-title,main.cine-page .v20-scroll-intro h2,main.cine-page .v20-editorial-copy h2{font-size:clamp(44px,5.6vw,92px)!important}
+main.cine-page h3{font-family:var(--cine-serif),Georgia,serif;font-weight:400!important;letter-spacing:-.01em!important}
+main.cine-page :is(.mono-highlight,.gradient-text,h2 span,.v20-scroll-intro h2 span){font-family:var(--cine-serif),Georgia,serif;font-style:italic;background:none!important;color:var(--c-accent)!important;-webkit-text-fill-color:var(--c-accent)!important}
+main.cine-page :is(p,li,.large-paragraph,.muted-paragraph){color:var(--c-body)!important}
+main.cine-page :is(.eyebrow,.section-label,.v20-overline,.v20-editorial-index,.v20-scroll-number,.service-eyebrow,.project-kind,.why-number,.v17-division>span,.service-top span,.service-bottom,.gallery-controls span){font-family:var(--cine-mono),monospace!important;font-weight:500!important;font-size:11px!important;letter-spacing:.22em!important;text-transform:uppercase;color:var(--c-muted)!important}
+main.cine-page .eyebrow-dot{background:var(--c-accent-strong)!important;box-shadow:0 0 10px var(--c-accent-strong)!important;width:6px;height:6px}
+main.cine-page :is(.text-link,.v20-editorial-action,.v17-service-caption a){font-family:var(--cine-mono),monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--c-accent)!important;border-color:rgba(156,194,255,.4)!important}
+
+/* buttons: square, mono, outlined like the hero */
+main.cine-page :is(.mono-button,.v20-scroll-footer a,.v20-transformation-end a){border-radius:0!important;background:transparent!important;border:1px solid #3b7ff0!important;color:var(--c-accent)!important;box-shadow:none!important;font-family:var(--cine-mono),monospace!important;font-size:12px!important;font-weight:500!important;letter-spacing:.18em;text-transform:uppercase}
+main.cine-page :is(.mono-button,.v20-scroll-footer a):hover{background:#2363dc!important;border-color:#2363dc!important;color:#fff!important}
+main.cine-page .mono-button-outline{border-color:rgba(239,236,230,.7)!important;color:var(--c-text)!important}
+main.cine-page .mono-button-outline:hover{background:var(--c-text)!important;color:var(--c-bg)!important}
+
+/* cards and panels: hairline frames instead of white cards */
+main.cine-page :is(.service-card,.v17-division,.why-card,.process-step,.project-card.project-card-image,.cybersecurity-feature,.v20-transform-card){background:var(--c-surface)!important;border:1px solid var(--c-line)!important;border-radius:0!important;box-shadow:none!important;color:var(--c-text)!important}
+main.cine-page :is(.service-card,.v17-division,.why-card,.project-card):hover{border-color:rgba(156,194,255,.45)!important;box-shadow:none!important}
+main.cine-page :is(.service-card,.why-card,.v17-division,.cybersecurity-feature) svg,main.cine-page .service-icon{color:var(--c-accent)!important}
+main.cine-page :is(.card-media,.project-thumb,.v20-editorial-display,.card-media img){border-radius:0!important}
+main.cine-page .v20-editorial-display{border:1px solid var(--c-line)!important;box-shadow:none!important}
+main.cine-page .industry-tags a{background:transparent!important;border:0!important;border-top:1px solid var(--c-line)!important;border-radius:0!important;color:var(--c-text)!important;font-family:var(--cine-serif),Georgia,serif;font-size:clamp(26px,2.6vw,40px)}
+main.cine-page .industry-tags a:hover{color:var(--c-accent)!important}
+main.cine-page .industry-tags a span{font-family:var(--cine-mono),monospace;font-size:11px;letter-spacing:.2em;color:var(--c-muted)!important}
+main.cine-page .process-step b,main.cine-page .why-number{color:var(--c-accent)!important}
+main.cine-page .gallery-controls button{border-radius:0!important;background:transparent!important;border:1px solid var(--c-line)!important;color:var(--c-text)!important}
+main.cine-page .circle-small{border-color:var(--c-line)!important;color:var(--c-accent)!important}
+
+/* strips and bands */
+main.cine-page .v20-capability-bar,main.cine-page .ticker{background:var(--c-bg)!important;border-block:1px solid var(--c-line)!important}
+main.cine-page .v20-capability-bar .container,main.cine-page .v20-capability-bar a,main.cine-page .ticker span{font-family:var(--cine-mono),monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--c-muted)!important}
+main.cine-page .v20-capability-bar a{color:var(--c-accent)!important}
+main.cine-page .ticker b{color:var(--c-accent-strong)!important}
+main.cine-page .v20-scroll-footer strong{color:var(--c-text)!important;font-family:var(--cine-serif),Georgia,serif;font-weight:400;font-size:clamp(28px,3vw,44px)}
+main.cine-page .v20-scroll-overlay h3{font-size:clamp(46px,6vw,96px)!important}
+main.cine-page .v17-final-cta{border-top:1px solid var(--c-line)}
+main.cine-page .v17-final-cta::before{opacity:.55!important}
+main.cine-page .demo-playground{border-radius:0!important}
+main.cine-page .demo-stage{border-radius:0}
+main.cine-page :is(.process-step,.why-card,.service-card,.v17-division,.project-card,.cybersecurity-feature)::before,main.cine-page :is(.process-step,.why-card,.service-card,.v17-division)::after{display:none!important}

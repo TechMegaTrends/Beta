@@ -2,10 +2,8 @@
 import {useEffect,useRef,useState} from 'react';
 import Link from 'next/link';
 import {ArrowUpRight} from 'lucide-react';
-import {Instrument_Serif,JetBrains_Mono} from 'next/font/google';
+import {cineSerif,cineMono} from '@/lib/fonts';
 // Cinematic "viewfinder" hero with an explainer tour: an isometric studio cutaway, then one room per process step.
-const serif=Instrument_Serif({subsets:['latin'],weight:'400',style:['normal','italic'],variable:'--cine-serif',display:'swap'});
-const mono=JetBrains_Mono({subsets:['latin'],weight:['400','500'],variable:'--cine-mono',display:'swap'});
 const chapters=[
  {id:'studio',label:'The studio',caption:'Welcome to TechMegaTrends.'},
  {id:'discover',label:'Discover',caption:'We start by understanding your goals, users and challenges.'},
@@ -32,7 +30,7 @@ export default function V20CinemaHero(){
   const tick=()=>{const t=(performance.now()-start)/1000;el.textContent=`${pad(Math.floor(t/3600))}:${pad(Math.floor(t/60)%60)}:${pad(Math.floor(t)%60)}:${pad(Math.floor((t%1)*24))}`;raf=requestAnimationFrame(tick)};
   raf=requestAnimationFrame(tick);return()=>cancelAnimationFrame(raf)},[still]);
  const next=(active+1)%chapters.length;
- return <section ref={hero} className={`cine-hero ${serif.variable} ${mono.variable}`} aria-labelledby="cine-hero-title">
+ return <section ref={hero} className={`cine-hero ${cineSerif.variable} ${cineMono.variable}`} aria-labelledby="cine-hero-title">
   <div className="cine-tour" aria-hidden="true">
    {chapters.map((c,i)=><video key={c.id} ref={el=>{videos.current[i]=el}} className={i===active?'is-active':''} muted playsInline preload={i===active||i===next?'auto':'none'} poster={`/media/tour/${c.id}.webp`}
     onTimeUpdate={e=>{if(i===active)setProgress(e.currentTarget.currentTime/(e.currentTarget.duration||5))}} onEnded={e=>{if(i===active&&e.currentTarget.currentTime>1)setActive(next)}}>
@@ -42,7 +40,7 @@ export default function V20CinemaHero(){
   <div className="cine-grain" aria-hidden="true"/>
   <div className="cine-frame container">
    <i className="cine-corner cine-corner-tl" aria-hidden="true"/><i className="cine-corner cine-corner-tr" aria-hidden="true"/>
-   <div className="cine-meta cine-reveal" style={{'--d':'0ms'} as React.CSSProperties}><span><b className="cine-dot"/>Reel 01 · How we work</span><span>{pad(active+1)} / {pad(chapters.length)} · {chapters[active].label}</span></div>
+   <div className="cine-meta cine-reveal" style={{'--d':'0ms'} as React.CSSProperties}><span><b className="cine-dot"/>How we work</span><span>{pad(active+1)} / {pad(chapters.length)} · {chapters[active].label}</span></div>
    <div className="cine-body">
     <h1 id="cine-hero-title" className="cine-title"><span className="cine-reveal" style={{'--d':'120ms'} as React.CSSProperties}>We engineer</span><em className="cine-reveal" style={{'--d':'260ms'} as React.CSSProperties}>what’s next.</em></h1>
     <aside className="cine-synopsis cine-reveal" style={{'--d':'420ms'} as React.CSSProperties}>
@@ -59,6 +57,6 @@ export default function V20CinemaHero(){
     </button>)}
    </nav>
   </div>
-  <div className="cine-edge" aria-hidden="true"><span ref={clock}>00:00:00:00</span><span>Reel 01</span></div>
+  <div className="cine-edge" aria-hidden="true"><span ref={clock}>00:00:00:00</span></div>
  </section>;
 }
