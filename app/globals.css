@@ -742,25 +742,6 @@ main :is(.portfolio-card,.product-card){background:#fff!important;border:1px sol
 main .gallery-controls :is(span,b){color:var(--v20-muted)!important}
 main .gallery-controls button{border-color:var(--v20-line)!important;color:var(--v20-accent)!important;background:#fff!important}
 main :is(.v17-portfolio-note,.v17-service-help) strong{color:var(--v20-ink)!important}
-
-/* V20 hero: 3D light-tube tunnel. Frames travel from far to near while rotating, creating a spiral. */
-.v20-tunnel-mist{position:absolute;inset:0;background:radial-gradient(ellipse 46% 58% at 69% 50%,rgba(26,52,98,.92) 0%,rgba(47,82,140,.72) 34%,rgba(118,154,206,.38) 62%,rgba(226,237,251,0) 86%)}
-.v20-tunnel{position:absolute;left:69%;top:50%;width:0;height:0;perspective:760px;transform-style:preserve-3d}
-.v20-tunnel-track{position:absolute;transform-style:preserve-3d;transform:rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg));transition:transform .6s cubic-bezier(.22,1,.36,1)}
-.v20-tunnel-frame{--s:min(30vw,420px);position:absolute;left:calc(var(--s)/-2);top:calc(var(--s)/-2);width:var(--s);height:var(--s);transform-style:preserve-3d;opacity:0;animation:v20-tunnel-fly 24s linear infinite;will-change:transform,opacity}
-.v20-tunnel-frame i{position:absolute;border-radius:6px;background:linear-gradient(90deg,#d9f1ff,#fff 30%,#fff 70%,#d9f1ff);box-shadow:0 0 6px #fff,0 0 18px rgba(150,212,255,.95),0 0 46px rgba(64,140,255,.75)}
-.v20-tunnel-frame i:nth-child(1){left:6%;right:6%;top:0;height:7px}
-.v20-tunnel-frame i:nth-child(2){left:6%;right:6%;bottom:0;height:7px}
-.v20-tunnel-frame i:nth-child(3){top:6%;bottom:6%;left:0;width:7px;background:linear-gradient(180deg,#d9f1ff,#fff 30%,#fff 70%,#d9f1ff)}
-.v20-tunnel-frame i:nth-child(4){top:6%;bottom:6%;right:0;width:7px;background:linear-gradient(180deg,#d9f1ff,#fff 30%,#fff 70%,#d9f1ff)}
-@keyframes v20-tunnel-fly{0%{transform:translateZ(-2600px) rotateZ(0deg);opacity:0}14%{opacity:.85}78%{opacity:1}100%{transform:translateZ(520px) rotateZ(150deg);opacity:0}}
-.v20-tunnel-floor{position:absolute;left:28%;right:-10%;bottom:-6%;height:34%;background:radial-gradient(ellipse 50% 60% at 50% 30%,rgba(191,229,255,.55),rgba(80,140,230,.18) 45%,transparent 72%);filter:blur(6px)}
-.v20-tunnel-stage .v20-london-poster{opacity:.45}
-.v20-tunnel-stage .v20-hero-wash{background:linear-gradient(90deg,rgba(244,249,255,.96) 0%,rgba(240,247,255,.86) 30%,rgba(236,245,255,.22) 52%,rgba(236,245,255,0) 64%)}
-@media(max-width:900px){.v20-tunnel{left:50%;top:42%}.v20-tunnel-frame{--s:62vw}.v20-tunnel-mist{background:radial-gradient(ellipse 70% 46% at 50% 42%,rgba(26,52,98,.7),rgba(118,154,206,.28) 60%,transparent 85%)}.v20-tunnel-stage .v20-hero-wash{background:linear-gradient(180deg,rgba(244,249,255,.9) 0%,rgba(240,247,255,.82) 60%,rgba(240,247,255,.6) 100%)}}
-@media(prefers-reduced-motion:reduce){.v20-tunnel-frame{animation-play-state:paused}.v20-tunnel-track{transition:none}}
-html.reduce-motion .v20-tunnel-frame{animation-play-state:paused}
-
 /* V20 unique section imagery: each story chapter, editorial panel and the final CTA gets its own photo instead of repeating the hero. */
 .v20-scroll-chapter:nth-child(1) .v20-scroll-city{background-image:linear-gradient(90deg,rgba(7,26,55,.82),rgba(10,36,70,.44) 60%,rgba(10,36,70,.16)),url('/images/v20/sections/story-disconnected.webp');background-position:center;filter:none}
 .v20-scroll-chapter:nth-child(2) .v20-scroll-city{background-image:linear-gradient(90deg,rgba(7,26,55,.82),rgba(10,36,70,.44) 60%,rgba(10,36,70,.16)),url('/images/v20/sections/story-connected.webp');background-position:center;filter:none}
@@ -784,3 +765,45 @@ main .legal-content,main .page-prose{padding:clamp(28px,4vw,56px)!important;bord
 main .legal-content h2:first-child{margin-top:0}
 main .page-hero:not(.page-hero-imaged){background:none}
 main .page-hero-imaged+.page-content{padding-top:56px}
+
+/* V20 cinematic viewfinder hero (homepage): dark film frame, reel meta, running timecode, serif headline. */
+.cine-hero{position:relative;isolation:isolate;overflow:hidden;background:#07090f;color:#efece6;padding:118px 0 44px;min-height:min(100svh,940px);display:flex;align-items:center}
+.cine-grain{position:absolute;inset:0;z-index:-1;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0 1px,transparent 1px 3px),radial-gradient(ellipse 80% 70% at 60% 40%,rgba(35,99,220,.16),transparent 70%),radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.55) 100%)}
+.cine-grain:after{content:"";position:absolute;inset:-50%;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:cine-grain 1s steps(6) infinite}
+@keyframes cine-grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,1%)}100%{transform:translate(0,0)}}
+.cine-frame{position:relative;width:min(1280px,calc(100% - 150px))}
+.cine-corner{position:absolute;top:0;width:14px;height:14px;border:solid rgba(239,236,230,.55);border-width:1px 0 0 1px}
+.cine-corner-tl{left:-18px}.cine-corner-tr{right:-18px;border-width:1px 1px 0 0}
+.cine-meta{display:flex;justify-content:space-between;gap:20px;padding:22px 0 16px;border-bottom:1px solid rgba(239,236,230,.1);font:500 11px/1.4 var(--cine-mono),monospace;letter-spacing:.22em;text-transform:uppercase;color:#8a93a6}
+.cine-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#4d8dff;margin-right:12px;vertical-align:2px;box-shadow:0 0 10px #4d8dff}
+.cine-body{display:grid;grid-template-columns:1fr minmax(260px,330px);gap:clamp(32px,5vw,80px);align-items:end;padding:clamp(48px,7vh,84px) 0 clamp(40px,6vh,72px)}
+.cine-title{margin:0;font-family:var(--cine-serif),Georgia,serif;font-weight:400;font-size:clamp(58px,9vw,150px);line-height:.9;letter-spacing:-.025em}
+.cine-title span,.cine-title em{display:block}
+.cine-title em{font-style:italic;color:#9cc2ff;padding-left:.04em}
+.cine-synopsis{border-left:1px solid rgba(239,236,230,.12);padding-left:28px}
+.cine-label{font:500 11px/1 var(--cine-mono),monospace;letter-spacing:.22em;text-transform:uppercase;margin:0 0 16px}
+.cine-synopsis p:not(.cine-label){font-size:15px;line-height:1.7;margin:0 0 26px}
+.cine-actions{display:grid;gap:12px}
+.cine-btn{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 18px;border:1px solid rgba(239,236,230,.7);color:#efece6;font:500 12px/1 var(--cine-mono),monospace;letter-spacing:.18em;text-transform:uppercase;transition:background .25s,color .25s,border-color .25s}
+.cine-btn:hover{background:#efece6;color:#07090f}
+.cine-btn-accent{border-color:#3b7ff0;color:#9cc2ff}
+.cine-btn-accent:hover{background:#2363dc;border-color:#2363dc;color:#fff}
+.cine-btn:focus-visible{outline:2px solid #9cc2ff;outline-offset:3px}
+.cine-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:0;padding-top:26px;border-top:1px solid rgba(239,236,230,.1)}
+.cine-stats dt{font:500 11px/1.4 var(--cine-mono),monospace;letter-spacing:.2em;text-transform:uppercase;color:#8a93a6}
+.cine-stats dt b{color:#efece6;margin-right:8px;font-weight:500}
+.cine-stats dd{margin:10px 0 0;font-family:var(--cine-serif),Georgia,serif;font-size:clamp(34px,3.6vw,56px);line-height:1;color:#efece6}
+.cine-edge{position:absolute;right:26px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:36px;font:500 10px/1 var(--cine-mono),monospace;letter-spacing:.22em;text-transform:uppercase;color:#8a93a6}
+.cine-edge span{writing-mode:vertical-rl}
+/* text is visible by default; the reveal only animates in from the hidden state, so a paused animation never hides it */
+.cine-reveal{animation:cine-in 1s cubic-bezier(.2,.7,.2,1) var(--d,0ms) backwards}
+@keyframes cine-in{from{opacity:0;transform:translateY(18px);filter:blur(6px)}}
+/* outrank the site-wide light-theme text colours inside this dark hero */
+main .cine-hero :is(h1,h2,h3){color:#f3f0ea!important;-webkit-text-fill-color:currentColor}
+main .cine-hero p{color:#c9cdd6!important}
+main .cine-hero .cine-label{color:#8a93a6!important}
+@media(max-width:900px){.cine-hero{min-height:0;padding:112px 0 36px}.cine-frame{width:calc(100% - 40px)}.cine-corner{display:none}.cine-body{grid-template-columns:1fr;align-items:start}.cine-synopsis{border-left:0;border-top:1px solid rgba(239,236,230,.12);padding:24px 0 0}.cine-edge{display:none}.cine-meta span:last-child{display:none}}
+@media(max-width:560px){.cine-title{font-size:clamp(48px,15vw,72px)}.cine-stats{grid-template-columns:1fr 1fr 1fr;gap:12px}.cine-stats dt{font-size:9px;letter-spacing:.12em}.cine-stats dd{font-size:30px}}
+@media(prefers-reduced-motion:reduce){.cine-reveal,.cine-grain:after{animation:none}}
+html.reduce-motion .cine-reveal{animation:none}
+html.reduce-motion .cine-grain:after{animation:none}
